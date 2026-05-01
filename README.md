@@ -1,19 +1,34 @@
-# 🎈 Blank app template
+# TradeIQ — AI-Powered Personal Trade Assistant
 
-A simple Streamlit app template for you to modify!
+A free AI-powered trade assistant for retail investors trading on the ASX and US markets.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## What it does
+Enter a stock ticker, your entry price, and your target price. 
+Optionally upload a price chart screenshot. TradeIQ will:
 
-### How to run it on your own machine
+- Fetch live fundamentals (P/E, EPS, market cap, 52-week range)
+- Show full dividend history and yield
+- Analyse your uploaded chart for technical patterns
+- Give you a plain-English AI verdict — Buy, Hold, or Sell
 
-1. Install the requirements
+Built for both beginner traders who want guidance and experienced 
+traders who want a fast, unbiased second opinion.
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+## How to use
+**ASX stocks** — add .AX suffix e.g. `CBA.AX`, `BHP.AX`, `WES.AX`  
+**US stocks** — ticker only e.g. `AAPL`, `TSLA`, `NVDA`
 
-2. Run the app
+## Tech stack
+- Python + Streamlit (frontend)
+- yfinance (live market data)
+- Anthropic Claude API (AI analysis)
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+## Setup
+1. Clone this repo
+2. Install dependencies: `pip install streamlit yfinance anthropic pillow`
+3. Set your API key: `export ANTHROPIC_API_KEY="your-key-here"`
+4. Run: `streamlit run streamlit_app.py`
+
+## Disclaimer
+This tool is for educational purposes only. 
+Not financial advice. Always do your own research before trading.
