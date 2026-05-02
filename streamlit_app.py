@@ -381,7 +381,8 @@ def render_dashboard(data: dict, current_price: float, target_price: float, ai_r
     else:
         verdict_class = "verdict-hold"
 
-    st.markdown(ai_response)
+    clean_response = ai_response.replace("$", "\\$")
+    st.markdown(clean_response)
 
     st.markdown("""
     <div class="disclaimer">
